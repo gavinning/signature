@@ -2,7 +2,7 @@
   "name": "@4a/sign",
   "version": "0.1.0",
   "description": "简单签名认证",
-  "main": "app.js",
+  "main": "sign.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,7 +12,9 @@
   },
   "keywords": [
     "sign",
-    "signature"
+    "signature",
+    "simple-sign",
+    "simple-signature"
   ],
   "author": "gavinning",
   "license": "MIT",
