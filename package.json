@@ -1,6 +1,6 @@
 {
   "name": "@4a/sign",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "简单签名认证",
   "main": "sign.js",
   "scripts": {
@@ -21,5 +21,13 @@
   "bugs": {
     "url": "https://github.com/gavinning/signature/issues"
   },
-  "homepage": "https://github.com/gavinning/signature#readme"
+  "homepage": "https://github.com/gavinning/signature#readme",
+  "dependencies": {
+    "@4a/asp": "^0.1.1",
+    "@4a/rediskit": "^0.1.1",
+    "uid": "^1.0.0"
+  },
+  "devDependencies": {
+    "ioredis": "^4.17.3"
+  }
 }
