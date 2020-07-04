@@ -50,7 +50,7 @@ class Sign {
         return Object.keys(obj)
             .sort()
             .map(key => key + '=' + obj[key])
-            .join('&') + '&appKey=' + this.appKey
+            .join('&') + '&appId=' + this.appId
     }
 
     isExpired(params) {

@@ -6,15 +6,19 @@ const sign = new Sign({
     appId: 'test',
     appSecret: 'test',
     // redis,
-    debug: true
 })
 
 const params = {
-    app: 'app',
-    name: 'name',
-    // once: 'hp5nfvydjtpo08szqxyyqnr20o'
+    name: 'tom',
+    age: 20,
 }
 
+const params2 = {
+    name: 'tom',
+    age: 20,
+    once: 'avw7ggazw42zoh8rk0iyqvi67h',
+    timestamp: 1577836800000
+}
 
 async function test() {
     console.log(
