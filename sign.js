@@ -33,6 +33,7 @@ class Sign {
     create(params) {
         params.once = params.once || uid(26)
         params.timestamp = params.timestamp || Date.now()
+        asp.debug(this.toString(params))
         return Hmac.use(this.appSecret).sha256(this.toString(params))
     }
 
@@ -50,7 +51,7 @@ class Sign {
         return Object.keys(obj)
             .sort()
             .map(key => key + '=' + obj[key])
-            .join('&') + '&appId=' + this.appId
+            .join('&')
     }
 
     isExpired(params) {
