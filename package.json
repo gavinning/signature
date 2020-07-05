@@ -1,6 +1,6 @@
 {
   "name": "@4a/sign",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "简单签名认证",
   "main": "sign.js",
   "scripts": {
