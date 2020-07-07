@@ -33,7 +33,7 @@ class Sign {
     create(params) {
         params.once = params.once || uid(26)
         params.timestamp = params.timestamp || Date.now()
-        asp.debug(this.toString(params))
+        this.debug && asp.debug('@4a/sign:string:', this.toString(params))
         return Hmac.use(this.appSecret).sha256(this.toString(params))
     }
 
@@ -47,7 +47,7 @@ class Sign {
         if (params.sign !== this.create(filter(params, ['sign']))) {
             throw new Error('Error Signatrue')
         }
-        return params.sign === this.create(filter(params, ['sign']))
+        return true
     }
 
     toString(obj) {
