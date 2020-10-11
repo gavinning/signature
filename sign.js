@@ -39,13 +39,16 @@ class Sign {
 
     async verify(params) {
         if (this.isExpired(params)) {
-            throw new Error('Expired Signature')
+            console.log('sign: Expired Signature')
+            return false
         }
         if (this.redis && await this.isRepeat(params.once)) {
-            throw new Error('Repeated Request')
+            console.log('sign: Repeated Request')
+            return false
         }
         if (params.sign !== this.create(filter(params, ['sign']))) {
-            throw new Error('Error Signatrue')
+            console.log('sign: Error Signatrue')
+            return false
         }
         return true
     }
