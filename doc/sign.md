@@ -1,19 +1,17 @@
 Signature
 ---
-签名规则@1.0.2
+签名规则 v1.0.3
 
+<br />
 
-### 签名公共参数
-公共参数添及签名结果加到请求参数中  
-1、GET请求添加到query  
-2、其他请求添加到body  
+### 签名推荐公共参数
+
 ```yaml
-appId: 商户id
 once: 随机字符串
 timastamp: 签名时间戳
 ```
 
-### 测试帐户
+### 签名密钥信息示例
 ```yaml
 appId: test
 appSecret: test
@@ -21,6 +19,7 @@ appSecret: test
 
 ### 签名过程示例
 ```js
+// => 所有请求参数放到一个对象里准备签名
 params = {
     name: 'tom',
     appId: 'test',
@@ -29,7 +28,7 @@ params = {
 }
 
 
-// => 对params的key进行排序，并转换成字符串
+// => 对params的key进行排序，并将params转换成字符串
 str = 'appId=test&name=tom&once=avw7ggazw42zoh8rk0iyqvi67h&timestamp=1577836800000'
 
 
